@@ -1,6 +1,6 @@
 # 🕯️ DiêVelas
 
-> ⚠️ Projeto em desenvolvimento
+> Projeto em desenvolvimento
 
 E-commerce de velas artesanais e veganas, desenvolvido como projeto pessoal.
 
@@ -18,8 +18,8 @@ Desenvolver habilidades práticas voltadas ao desenvolvimento web.
 
 ## Como rodar o projeto?
 
-npm install
-npm run dev
+- npm install
+- npm run dev
 
 
 Acesse: http://localhost:3000
