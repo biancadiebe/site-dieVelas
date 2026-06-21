@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .backgroundImage {
@@ -26,6 +27,24 @@
   font-size: 3rem;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size: 2.5rem;
+  color: #5f4c36;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.texto {
+  font-size: 1.5rem;
+  color: #5f4c36;
+  display: flex;
+  justify-content: center;
 }
 
 .botao {
@@ -33,13 +52,20 @@
   margin-top: 2rem;
   border-radius: 40px;
   background-color: #5db388;
-  color: #505b45;
-  font-weight: bold;
+  color: #5f4c36;
+  font-weight: bolder;
 }
 
 .divCards {
   display: flex;
   justify-content: center;
   gap: 10rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
+}
+
+.divVendas {
+  display: flex;
+  justify-content: center;
+  gap: 12rem;
+  margin-top: 3rem;
 }
