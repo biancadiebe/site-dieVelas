@@ -6,8 +6,10 @@
   background: #e6e5e5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid #d1d1d1;
+  cursor: pointer; /* Indica que o card é clicável */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição para o efeito de hover */
 }
 
 .cardVenda:hover {
@@ -26,8 +28,8 @@
   object-fit: cover;
 }
 
-.info {
-  padding: 1rem;
+.infos {
+  padding: 0.5rem;
 }
 
 .title {
@@ -47,6 +49,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 10px;
+  color: #3a2b1b;
 }
 
 .price {
