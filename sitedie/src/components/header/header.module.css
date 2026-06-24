@@ -1,51 +1,50 @@
 /* Basic header styles added so Header displays on the Home page */
 .header {
-	width: 100%;
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: sticky;
-	top: 0;
-	z-index: 50;
-	background: rgba(121, 101, 64, 0.92);
-	backdrop-filter: blur(8px);
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #b8845a;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .logo {
-	font-size: 1.125rem;
-	font-weight: 700;
-	color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .nav {
-	display: flex;
-	gap: 1.25rem;
-	align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
 }
 
 .nav a {
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 500;
-	transition: color 0.15s ease;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
 }
 
 .nav a:hover {
-	color: #a0682c;
+  color: #a0682c;
 }
 
 .icons {
-	display: flex;
-	gap: 0.75rem;
-	color: #ffffff;
-	font-size: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
 .icons span {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-
