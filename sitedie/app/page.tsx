@@ -11,6 +11,7 @@ import { CardVenda } from "@/src/components/cardVenda/cardVenda";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { NewsLetter } from "@/src/components/newsletter/NewsLetter";
+import { Footer } from "@/src/components/footer/footer";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         />
 
         <Header />
-        <div className={styles.divTexto}>
+        <div className={styles.divTexto} id="inicio">
           <h1 className={`${styles["titulo-principal"]}`}>
             Dando aroma para seus momentos
           </h1>
@@ -32,7 +33,9 @@ export default function Home() {
         </div>
       </div>
 
-      <h2 className={`${styles["subtitulo"]}`}>Sobre o Diê</h2>
+      <h2 className={`${styles["subtitulo"]}`} id="sobre">
+        Sobre o Diê
+      </h2>
       <p className={`${styles["texto"]}`}> Conheça nossos valores </p>
       <div className={styles.divCards}>
         <Card icon={<PiLeafThin />} label="100% vegana" />
@@ -40,7 +43,9 @@ export default function Home() {
         <Card icon={<TbCandle />} label="Personalizadas" />
       </div>
 
-      <h2 className={`${styles["subtitulo"]}`}>Nosso Catalógo</h2>
+      <h2 className={`${styles["subtitulo"]}`} id="catalogo">
+        Nosso Catalógo
+      </h2>
       <p className={`${styles["texto"]}`}>Descubra nossos aromas</p>
       <p>
         <a href="#" className={styles["sub-texto"]}>
@@ -52,27 +57,39 @@ export default function Home() {
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela de Cera Natural"
+          title="Vela Bubble"
           price="29,90"
           img="/imagens/velabubble.jpg"
         />
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela de Cera Natural"
+          title="Vela Brotinho de Bambu"
           price="29,90"
-          img="/imagens/velabubble.jpg"
+          img="/imagens/vela120g.jpg"
         />
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela de Cera Natural"
+          title="Vela Na latinha"
           price="29,90"
-          img="/imagens/velabubble.jpg"
+          img="/imagens/velalata.jpg"
+        />
+
+        <CardVenda
+          icon={<MdOutlineShoppingCart />}
+          label="Compre agora"
+          title="Vela Média"
+          price="29,90"
+          img="/imagens/velamedia.jpg"
         />
       </div>
 
-	  	<NewsLetter />
+      <NewsLetter />
+
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   );
 }

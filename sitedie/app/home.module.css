@@ -32,7 +32,7 @@
 
 .subtitulo {
   font-size: 2.5rem;
-  color: #3a2b1b;
+  color: #5f4c36;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 .texto {
   font-size: 1.5rem;
-  color: #5f4c36;
+  color: #6e6d6b;
   display: flex;
   justify-content: center;
   font-weight: lighter;
@@ -81,7 +81,7 @@
 
 .sub-texto {
   display: flex;
-  margin-left: 80%;
+  margin-left: 88%;
   color: #5f4c36;
   gap: 0.5rem;
   align-items: center;

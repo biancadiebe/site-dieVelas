@@ -1,5 +1,5 @@
 .card {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -9,19 +9,22 @@
   box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
   border: 1px solid #d1d1d1;
   cursor: pointer; /* Indica que o card é clicável */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição para o efeito de hover */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease; /* Transição para o efeito de hover */
 }
 
-.card:hover { /* Efeito de hover para dar destaque ao card e parecer "clicável" */
+.card:hover {
+  /* Efeito de hover para dar destaque ao card e parecer "clicável" */
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.iconWrapper { 
+.iconWrapper {
   background: #5db388;
   border-radius: 50%;
   padding: 1rem;
-  color: rgb(255, 255, 255);
+  color: #5f4c36;
   display: flex;
   align-items: center;
   justify-content: center;
