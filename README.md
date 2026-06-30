@@ -16,6 +16,10 @@ Desenvolver habilidades práticas voltadas ao desenvolvimento web.
 - CSS Modules
 - React Icons
 
+## Acesse o site:
+
+https://site-die-velas-iac3.vercel.app
+
 ## Como rodar o projeto?
 
 - npm install
@@ -23,3 +27,5 @@ Desenvolver habilidades práticas voltadas ao desenvolvimento web.
 
 
 Acesse: http://localhost:3000
+
+
