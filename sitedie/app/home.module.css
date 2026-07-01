@@ -21,17 +21,18 @@
   min-height: 85vh;
   text-align: center;
   font-weight: bold;
+  padding: 0 2rem;
 }
 
 .titulo-principal {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-weight: bold;
 }
 
 .subtitulo {
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   color: #5f4c36;
   margin-top: 2rem;
   display: flex;
@@ -40,7 +41,7 @@
 }
 
 .texto {
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
   color: #6e6d6b;
   display: flex;
   justify-content: center;
@@ -65,24 +66,36 @@
 }
 
 .divCards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
 .divVendas {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12rem;
   margin-top: 3rem;
 }
 
 .sub-texto {
   display: flex;
-  margin-left: 88%;
+  justify-content: flex-end;
+  padding-right: 4rem;
   color: #5f4c36;
   gap: 0.5rem;
   align-items: center;
+}
+
+/* ÁREA MOBILE */
+
+@media (max-width: 768px) {
+  .img {
+    height: 90svh; /* small viewport height */
+  }
+  .backgroundImage {
+    object-position: center center; /*centraliza a imagem */
+  }
 }
