@@ -1,7 +1,7 @@
 .cardVenda {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 100%;
   border-radius: 16px;
   background: #e6e5e5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -9,7 +9,9 @@
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   border: 1px solid #d1d1d1;
   cursor: pointer; /* Indica que o card é clicável */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição para o efeito de hover */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease; /* Transição para o efeito de hover */
 }
 
 .cardVenda:hover {
@@ -29,6 +31,10 @@
 }
 
 .infos {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
   padding: 0.5rem;
 }
 
@@ -58,7 +64,7 @@
   color: #5f4c36;
 }
 
-.iconWrapper { 
+.iconWrapper {
   background: #5db388;
   border-radius: 50%;
   padding: 0.6rem;
@@ -69,4 +75,14 @@
   font-size: 1.2rem;
   flex-shrink: 0;
   margin-right: 20px;
+}
+
+/* ÁREA MOBILE */
+
+@media (max-width: 768px) {
+  .cardVenda {
+    width: 47vw;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
 }

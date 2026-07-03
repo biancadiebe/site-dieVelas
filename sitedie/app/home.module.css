@@ -67,7 +67,7 @@
 
 .divCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -75,9 +75,10 @@
 
 .divVendas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-top: 3rem;
+  padding: 0 4rem;
 }
 
 .sub-texto {
@@ -97,5 +98,24 @@
   }
   .backgroundImage {
     object-position: center center; /*centraliza a imagem */
+  }
+  .divCards {
+    gap: 3rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  .divVendas {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 0;
+    align-items: stretch;
+  }
+  .sub-texto {
+    margin-top: 1rem;
   }
 }

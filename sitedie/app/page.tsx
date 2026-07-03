@@ -71,15 +71,14 @@ export default function Home() {
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela Na latinha"
+          title="Vela na Latinha"
           price="29,90"
           img="/imagens/velalata.jpg"
         />
-
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela Média"
+          title="Vela média"
           price="29,90"
           img="/imagens/velamedia.jpg"
         />
