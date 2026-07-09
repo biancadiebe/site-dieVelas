@@ -1,0 +1,40 @@
+.subtitulo {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: #5f4c36;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: start;
+  padding-left: 3rem;
+  font-weight: bolder;
+}
+
+.texto {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  color: #6e6d6b;
+  display: flex;
+  justify-content: start;
+  padding-left: 3rem;
+  font-weight: lighter;
+}
+
+.divCatalogo {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start; /* impede o filtro de esticar */
+}
+
+.cardVendas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  flex: 1; /* ocupa o espaço restante ao lado do filtro */
+}
+
+.paginas {
+  color: black;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+}

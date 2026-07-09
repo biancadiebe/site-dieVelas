@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import styles from "./filtro.module.css";
+import { CardVenda } from "../cardVenda/cardVenda";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function Filtro() {
   const [precoMax, setPrecoMax] = useState(65);
@@ -15,7 +18,7 @@ export default function Filtro() {
           <li>Vela na Latinha</li>
           <li>Velas Personalizadas</li>
         </ul>
-        <hr></hr>
+        <hr className={styles.divisor} />
 
         <h3 className={styles.subtituloFiltro}>AROMA</h3>
         <ul className={styles.opcoesFiltro}>
@@ -25,7 +28,7 @@ export default function Filtro() {
           <li>Fresco</li>
           <li>Frutado</li>
         </ul>
-        <hr></hr>
+        <hr className={styles.divisor} />
 
         <h3 className={styles.subtituloFiltro}>PREÇO</h3>
 

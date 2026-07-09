@@ -66,17 +66,17 @@
 }
 
 .divCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10rem;
+  display: flex;
+  gap: 5rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .divVendas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 13rem;
   margin-top: 3rem;
   padding: 0 4rem;
 }

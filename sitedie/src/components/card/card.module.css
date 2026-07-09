@@ -12,6 +12,8 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease; /* Transição para o efeito de hover */
+  max-width: 330px; /* adiciona aqui */
+  width: 100%;
 }
 
 .card:hover {

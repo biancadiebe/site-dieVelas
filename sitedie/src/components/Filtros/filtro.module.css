@@ -1,27 +1,36 @@
 .tituloFiltro {
-  color: #5f4c36;
-  font-weight: bold;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 23px;
 }
 
 .divFiltro {
   background-color: #ffffff;
   border-radius: 30px;
   width: 250px;
-  margin-left: 20px;
+  margin-left: 40px;
   padding: 1.5rem; /* espaço interno entre o conteúdo e as bordas */
   min-height: 500px; /* altura mínima */
   display: flex;
   flex-direction: column; /* empilha o conteúdo verticalmente */
-  gap: 0.5rem; /* espaço entre cada elemento filho */
+  gap: 0.4rem; /* espaço entre cada elemento filho */
+  box-shadow: 0px 1px 5px 1px rgba(161, 159, 159, 0.25);
 }
 
 .opcoesFiltro {
-  color: #6e6d6b;
+  color: #464545;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.opcoesFiltro li {
+  padding-top: 0.5rem;
 }
 
 .subtituloFiltro {
-  color: #6e6d6b;
+  color: #b8845a;
   font-weight: bolder;
+  font-size: 18px;
 }
 
 .preco {
@@ -52,4 +61,8 @@
   font-size: 0.8rem;
   color: #888;
   margin-top: 0.3rem;
+}
+
+.divisor {
+  color: #dadada;
 }
