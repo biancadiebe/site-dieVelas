@@ -64,12 +64,6 @@ Este projeto foi desenvolvido com o propósito de:
 * Consolidar conhecimentos em TypeScript e desenvolvimento Front-end;
 * Compor meu portfólio com um projeto completo e em constante evolução.
 
-## Demonstração
-
-Você pode visualizar o projeto em funcionamento através do link abaixo:
-
-https://site-die-velas-iac3-git-master-diebe.vercel.app
-
 ## 👩‍💻 Desenvolvido por
 
 **Bianca Diebe**
