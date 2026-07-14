@@ -70,8 +70,6 @@ Você pode visualizar o projeto em funcionamento através do link abaixo:
 
 https://site-die-velas-iac3-git-master-diebe.vercel.app
 
-> Assim que a aplicação estiver publicada, o link será disponibilizado nesta seção.
-
 ## 👩‍💻 Desenvolvido por
 
 **Bianca Diebe**
