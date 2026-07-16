@@ -25,11 +25,11 @@ export default function Header() {
           <a href="#inicio">Início</a>
           <a href="#catalogo">Produtos</a>
           <a href="#sobre">Sobre</a>
-          <a href="#contact">Contato</a>
+          <a href="#personalizados">Personalizados</a>
+          <a href="#contato">Contato</a>
         </nav>
         <div className={styles.icons}>
           <IoIosSearch />
-          <MdOutlineShoppingCart />
         </div>
 
         <nav

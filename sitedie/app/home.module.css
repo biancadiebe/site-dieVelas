@@ -25,10 +25,12 @@
 }
 
 .titulo-principal {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  font-weight: bold;
+  font-weight: 800;
+  line-height: 1.05;
+  max-width: 900px;
 }
 
 .subtitulo {
@@ -49,13 +51,17 @@
 }
 
 .botao {
-  padding: 1.3rem 1.5rem;
-  margin-top: 2rem;
-  border-radius: 40px;
+  padding: 1.4rem 2rem;
+  margin-top: 2.5rem;
+  border-radius: 999px;
   background-color: #5db388;
   color: #284a34;
-  font-weight: bolder;
-  transition: background-color 0.2s ease;
+  font-weight: 800;
+  font-size: 1rem;
+  min-width: 220px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .botao:hover {
@@ -76,9 +82,9 @@
 .divVendas {
   display: flex;
   justify-content: center;
-  gap: 13rem;
+  gap: 3rem;
   margin-top: 3rem;
-  padding: 0 4rem;
+  padding: 0 10rem;
 }
 
 .sub-texto {

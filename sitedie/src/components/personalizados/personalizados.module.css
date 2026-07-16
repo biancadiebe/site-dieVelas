@@ -1,0 +1,145 @@
+.secaoPersonalizados {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 0;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.cardPreview {
+  position: relative;
+  border-radius: 32px 0 0 32px;
+  overflow: hidden;
+  min-height: 520px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.18)
+  );
+}
+
+.wrapperImagem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imagem {
+  object-fit: cover;
+}
+
+.conteudo {
+  background: #745540;
+  border-radius: 32px;
+  padding: 3rem;
+  color: #f5ede6;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.26);
+  border-radius: 0px 32px 32px 0px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: clamp(2.25rem, 2.5vw, 3.25rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  color: #fff9f0;
+}
+
+.texto {
+  max-width: 38rem;
+  margin: 1.25rem 0 2rem;
+  line-height: 1.8;
+  color: #dccebe;
+  font-size: 1rem;
+}
+
+.etapas {
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.etapa {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.numeroEtapa {
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background: #9eb994;
+  color: #2b2316;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.tituloEtapa {
+  margin: 0;
+  font-size: 1rem;
+  color: #f8f1e7;
+}
+
+.descricaoEtapa {
+  margin: 0.3rem 0 0;
+  color: #d7c9b5;
+  line-height: 1.8;
+  max-width: 28rem;
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  border: none;
+  border-radius: 999px;
+  background: #98b98b;
+  color: #2b2316;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+  background: #a7c49a;
+}
+
+@media (max-width: 960px) {
+  .secaoPersonalizados {
+    grid-template-columns: 1fr;
+  }
+  .cardPreview {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 680px) {
+  .secaoPersonalizados {
+    padding: 2rem 1rem;
+  }
+  .conteudo {
+    padding: 2rem 1.5rem;
+  }
+  .texto {
+    margin-bottom: 1.5rem;
+  }
+  .etapa {
+    gap: 0.75rem;
+  }
+  .botao {
+    width: 100%;
+  }
+}

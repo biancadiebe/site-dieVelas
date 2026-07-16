@@ -10,8 +10,8 @@ import { TbCandle } from "react-icons/tb";
 import { CardVenda } from "@/src/components/cardVenda/cardVenda";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { NewsLetter } from "@/src/components/newsletter/NewsLetter";
 import { Footer } from "@/src/components/footer/footer";
+import { Personalizados } from "@/src/components/personalizados/personalizados";
 
 export default function Home() {
   return (
@@ -38,9 +38,22 @@ export default function Home() {
       </h2>
       <p className={`${styles["texto"]}`}> Conheça nossos valores </p>
       <div className={styles.divCards}>
-        <Card icon={<PiLeafThin />} label="100% vegana" />
-        <Card icon={<IoMdHeartEmpty />} label="Feito à mão" />
-        <Card icon={<TbCandle />} label="Personalizadas" />
+        <Card
+          icon={<PiLeafThin />}
+          title="100% vegana"
+          description="Sem ingredientes de origem animal."
+        />
+        <Card
+          icon={<IoMdHeartEmpty />}
+          title="Feito à mão"
+          description="Com carinho e de forma artesanal."
+          variant="accent"
+        />
+        <Card
+          icon={<TbCandle />}
+          title="Personalizadas"
+          description="Para suas comemorações e lembranças."
+        />
       </div>
 
       <h2 className={`${styles["subtitulo"]}`} id="catalogo">
@@ -84,8 +97,7 @@ export default function Home() {
         />
       </div>
 
-      <NewsLetter />
-
+      <Personalizados />
       <div className="footer">
         <Footer />
       </div>

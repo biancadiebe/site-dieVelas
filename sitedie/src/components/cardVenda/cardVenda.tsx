@@ -35,7 +35,6 @@ export function CardVenda({
 
         <div className={styles.preco}>
           <p className={styles.price}>R$ {price}</p>
-          <div className={styles.iconWrapper}>{icon}</div>
         </div>
       </div>
     </div>

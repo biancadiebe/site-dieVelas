@@ -1,17 +1,16 @@
 .cardVenda {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 100%; /* deixa o container controlar */
   border-radius: 16px;
-  background: #e6e5e5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: #ffffff; /* branco ao invés de cinza */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* sombra mais suave */
   overflow: hidden;
-  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-  border: 1px solid #d1d1d1;
-  cursor: pointer; /* Indica que o card é clicável */
+  border: none; /* remove a borda */
+  cursor: pointer;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease; /* Transição para o efeito de hover */
+    box-shadow 0.2s ease;
 }
 
 .cardVenda:hover {
@@ -23,7 +22,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 300px; /* imagem maior */
 }
 
 .img {
@@ -35,7 +34,7 @@
   flex-direction: column;
   flex: 1;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem; /* mais padding interno */
 }
 
 .title {
