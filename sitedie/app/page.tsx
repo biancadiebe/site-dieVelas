@@ -1,19 +1,25 @@
 "use client";
 
-import Header from "../src/components/header/header";
+import Header from "../src/components/header/Header";
 import Image from "next/image";
-import { Card } from "../src/components/card/card";
+import { Card } from "../src/components/card/Card";
 import styles from "./home.module.css";
 import { PiLeafThin } from "react-icons/pi";
+import { LuSlidersHorizontal } from "react-icons/lu";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { TbCandle } from "react-icons/tb";
-import { CardVenda } from "@/src/components/cardVenda/cardVenda";
+import { CardVenda } from "@/src/components/cardVenda/CardVenda";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Footer } from "@/src/components/footer/footer";
-import { Personalizados } from "@/src/components/personalizados/personalizados";
+import { Footer } from "@/src/components/footer/Footer";
+import { Personalizados } from "@/src/components/personalizados/Personalizados";
+import Button from "../src/components/button/Button";
+import router from "next/dist/shared/lib/router/router";
+import { useRouter } from "next/dist/client/components/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.img}>
@@ -29,7 +35,12 @@ export default function Home() {
           <h1 className={`${styles["titulo-principal"]}`}>
             Dando aroma para seus momentos
           </h1>
-          <button className={styles.botao}>Conheça o catálogo</button>
+          <button
+            className={styles.botao}
+            onClick={() => router.push("/catalogo")}
+          >
+            Conheça o catálogo
+          </button>
         </div>
       </div>
 
@@ -58,10 +69,14 @@ export default function Home() {
 
       <h2 className={`${styles["subtitulo"]}`} id="catalogo">
         Nosso Catalógo
+        <Button as="link" href="/catalogo" className={styles.filtroButton}>
+          <LuSlidersHorizontal />
+          Filtros
+        </Button>
       </h2>
       <p className={`${styles["texto"]}`}>Descubra nossos aromas</p>
       <p>
-        <a href="#" className={styles["sub-texto"]}>
+        <a href="/catalogo" className={styles["link-ver-todos"]}>
           Ver todos <FaLongArrowAltRight />
         </a>
       </p>
@@ -71,34 +86,41 @@ export default function Home() {
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
           title="Vela Bubble"
-          price="29,90"
+          price="50,00"
           img="/imagens/velabubble.jpg"
         />
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
           title="Vela Brotinho de Bambu"
-          price="29,90"
+          price="50,00"
           img="/imagens/vela120g.jpg"
         />
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela na Latinha"
-          price="29,90"
-          img="/imagens/velalata.jpg"
+          title="Vela na Latinha - Personalizada"
+          price="50,00"
+          img="/imagens/velalata.jpeg"
         />
         <CardVenda
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela média"
-          price="29,90"
-          img="/imagens/velamedia.jpg"
+          title="Vela média - Personalizada"
+          price="50,00"
+          img="/imagens/velamedia.jpeg"
         />
       </div>
 
-      <Personalizados />
-      <div className="footer">
+      <div id="personalizados">
+        <h2 className={`${styles["subtitulo"]}`} id="catalogo">
+          Velas personalizadas
+        </h2>
+        <p className={`${styles["texto"]}`}>Feitas para você</p>
+        <Personalizados />
+      </div>
+
+      <div className="footer" id="footer">
         <Footer />
       </div>
     </>

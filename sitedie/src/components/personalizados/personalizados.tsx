@@ -1,5 +1,6 @@
 import Image from "next/image";
-import styles from "./personalizados.module.css";
+import styles from "./Personalizados.module.css";
+import Button from "../button/Button";
 
 export function Personalizados() {
   return (
@@ -16,11 +17,11 @@ export function Personalizados() {
       </div>
 
       <div className={styles.conteudo}>
-        <h2 className={styles.titulo}>Velas Personalizadas</h2>
         <p className={styles.texto}>
           Também trabalhamos com kits personalizados! Criamos embalagens e
           aromas exclusivos para deixar suas comemorações, lembrancinhas ou até
-          mesmo o seu negócio ainda mais especiais. Entre em contato para saber mais informações.
+          mesmo o seu negócio ainda mais especiais. Entre em contato para saber
+          mais informações.
         </p>
 
         <div className={styles.etapas}>
@@ -40,7 +41,8 @@ export function Personalizados() {
             <div>
               <h3 className={styles.tituloEtapa}>Defina os detalhes</h3>
               <p className={styles.descricaoEtapa}>
-                Tamanho, embalagem e etiqueta, personalizado da forma que você precisa.
+                Tamanho, embalagem e etiqueta, personalizado da forma que você
+                precisa.
               </p>
             </div>
           </div>

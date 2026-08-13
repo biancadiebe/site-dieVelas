@@ -1,32 +1,65 @@
 "use client";
-import { useState } from "react";
-import styles from "./filtro.module.css";
-import { CardVenda } from "../cardVenda/cardVenda";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { IoMdHeartEmpty } from "react-icons/io";
+import styles from "./Filtro.module.css";
+import Button from "../button/Button";
 
-export default function Filtro() {
-  const [precoMax, setPrecoMax] = useState(65);
+interface FiltroProps {
+  filtro: {
+    aroma: string;
+    tipo: string;
+    precoMax: number;
+  };
+  onFiltroChange: (filtro: {
+    aroma: string;
+    tipo: string;
+    precoMax: number;
+  }) => void;
+  onLimpar: () => void;
+}
+
+export default function Filtro({
+  filtro,
+  onFiltroChange,
+  onLimpar,
+}: FiltroProps) {
   return (
     <>
       <div className={styles.divFiltro}>
         <h2 className={styles.tituloFiltro}>Filtros</h2>
         <h3 className={styles.subtituloFiltro}>TIPOS DE VELA</h3>
         <ul className={styles.opcoesFiltro}>
-          <li>Pote de Vidro 150ML</li>
-          <li>Pote de Vidro 100ML</li>
-          <li>Vela na Latinha</li>
-          <li>Velas Personalizadas</li>
+          <li onClick={() => onFiltroChange({ ...filtro, tipo: "classicas" })}>
+            Clássicas
+          </li>
+          <li onClick={() => onFiltroChange({ ...filtro, tipo: "especiais" })}>
+            Especiais
+          </li>
+          <li
+            onClick={() =>
+              onFiltroChange({ ...filtro, tipo: "personalizadas" })
+            }
+          >
+            Personalizadas
+          </li>
         </ul>
         <hr className={styles.divisor} />
 
         <h3 className={styles.subtituloFiltro}>AROMA</h3>
         <ul className={styles.opcoesFiltro}>
-          <li>Floral</li>
-          <li>Amadeirado</li>
-          <li>Cítrico</li>
-          <li>Fresco</li>
-          <li>Frutado</li>
+          <li onClick={() => onFiltroChange({ ...filtro, aroma: "floral" })}>
+            Floral
+          </li>
+          <li onClick={() => onFiltroChange({ ...filtro, aroma: "citrico" })}>
+            Cítrico
+          </li>
+          <li onClick={() => onFiltroChange({ ...filtro, aroma: "fresco" })}>
+            Fresco
+          </li>
+          <li onClick={() => onFiltroChange({ ...filtro, aroma: "frutado" })}>
+            Frutado
+          </li>
+          <li onClick={() => onFiltroChange({ ...filtro, aroma: "doce" })}>
+            Doce
+          </li>
         </ul>
         <hr className={styles.divisor} />
 
@@ -39,11 +72,13 @@ export default function Filtro() {
             até R$
             <input
               type="number"
-              value={precoMax}
-              onChange={(e) => setPrecoMax(Number(e.target.value))}
+              value={filtro.precoMax}
+              onChange={(e) =>
+                onFiltroChange({ ...filtro, precoMax: Number(e.target.value) })
+              }
               className={styles.precoInput}
               min={0}
-              max={200}
+              max={100}
             />
           </span>
         </div>
@@ -52,17 +87,23 @@ export default function Filtro() {
         <input
           type="range"
           min={0}
-          max={200}
-          value={precoMax}
-          onChange={(e) => setPrecoMax(Number(e.target.value))}
+          max={100}
+          value={filtro.precoMax}
+          onChange={(e) =>
+            onFiltroChange({ ...filtro, precoMax: Number(e.target.value) })
+          }
           className={styles.slider}
         />
 
         {/* Labels embaixo */}
         <div className={styles.precoLabels}>
           <span>R$ 0</span>
-          <span>R$ {precoMax}</span>
+          <span>R$ {filtro.precoMax}</span>
         </div>
+
+        <button onClick={onLimpar} className={styles.limpaFiltro}>
+          Limpar Filtros
+        </button>
       </div>
     </>
   );

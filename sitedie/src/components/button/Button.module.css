@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.primary {
+  background: #745540;
+  color: #ffffff;
+  border: 1px solid #745540;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+}
+
+.ghost {
+  background: #ffffff;
+  color: #5f4c36;
+  border: 1px solid #5f4c36;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.rounded {
+  border-radius: 999px;
+}

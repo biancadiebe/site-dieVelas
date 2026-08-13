@@ -25,7 +25,7 @@
 }
 
 .titulo-principal {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: 3.5rem;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-weight: 800;
@@ -54,8 +54,9 @@
   padding: 1.4rem 2rem;
   margin-top: 2.5rem;
   border-radius: 999px;
-  background-color: #5db388;
-  color: #284a34;
+  background-color: #98b98b;
+  border: none;
+  color: #2b2316;
   font-weight: 800;
   font-size: 1rem;
   min-width: 220px;
@@ -65,7 +66,7 @@
 }
 
 .botao:hover {
-  background-color: #4a9a72; /* cor mais escura ao passar o mouse */
+  background-color: #a7c49a;
   cursor: pointer;
   transform: translateY(-3px); /* sobe 3px */
   transition: transform 0.2s ease;
@@ -84,16 +85,34 @@
   justify-content: center;
   gap: 3rem;
   margin-top: 3rem;
+  margin-bottom: 2rem;
   padding: 0 10rem;
 }
 
-.sub-texto {
+.link-ver-todos {
   display: flex;
   justify-content: flex-end;
-  padding-right: 4rem;
+  padding-right: 10rem;
   color: #5f4c36;
   gap: 0.5rem;
   align-items: center;
+  font-size: 1.3rem;
+}
+
+/* filtro button reused on home page */
+.filtroButton {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #5f4c36;
+  border: 1px solid #5f4c36;
+  padding: 0.4rem 0.8rem;
+  width: 120px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
 }
 
 /* ÁREA MOBILE */
@@ -121,7 +140,25 @@
     margin-top: 0;
     align-items: stretch;
   }
+  .divVendas > *:nth-child(n + 3) {
+    /*para aparecer só 2 no mobile*/
+    display: none;
+  }
   .sub-texto {
     margin-top: 1rem;
+  }
+  .titulo-principal {
+    font-size: 2rem;
+  }
+  .link-ver-todos {
+    font-size: 1rem;
+    padding-right: 2rem;
+    margin-top: 0.5rem;
+  }
+  .subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 }

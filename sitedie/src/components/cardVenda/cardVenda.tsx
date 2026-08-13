@@ -1,4 +1,4 @@
-import styles from "./cardVenda.module.css";
+import styles from "./CardVenda.module.css";
 import Image from "next/image";
 
 interface CardProps {
@@ -7,24 +7,14 @@ interface CardProps {
   label: string;
   price: string;
   img: string;
-  favorito?: React.ReactNode;
   promocao?: string;
 }
 
-export function CardVenda({
-  icon,
-  label,
-  title,
-  price,
-  img,
-  favorito,
-  promocao,
-}: CardProps) {
+export function CardVenda({ label, title, price, img, promocao }: CardProps) {
   return (
     <div className={styles.cardVenda}>
       <div className={styles.imageWrapper}>
         <Image src={img} alt="Vela" fill className={styles.img} />
-        {favorito && <div className={styles.favorito}>{favorito}</div>}
 
         {promocao && <div className={styles.promocao}>{promocao}</div>}
       </div>

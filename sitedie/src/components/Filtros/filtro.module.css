@@ -7,14 +7,21 @@
 .divFiltro {
   background-color: #ffffff;
   border-radius: 30px;
-  width: 250px;
-  margin-left: 40px;
-  padding: 1.5rem; /* espaço interno entre o conteúdo e as bordas */
-  min-height: 500px; /* altura mínima */
+  width: 100%;
+  max-width: 560px;
+  padding: 1.5rem;
+  min-height: 500px;
   display: flex;
-  flex-direction: column; /* empilha o conteúdo verticalmente */
-  gap: 0.4rem; /* espaço entre cada elemento filho */
+  flex-direction: column;
+  gap: 0.8rem;
   box-shadow: 0px 1px 5px 1px rgba(161, 159, 159, 0.25);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .divFiltro {
+    padding: 1.25rem;
+  }
 }
 
 .opcoesFiltro {
@@ -24,11 +31,16 @@
 }
 
 .opcoesFiltro li {
+  cursor: pointer;
   padding-top: 0.5rem;
 }
 
+.opcoesFiltro li:hover {
+  color: black;
+}
+
 .subtituloFiltro {
-  color: #b8845a;
+  color: #745540;
   font-weight: bolder;
   font-size: 18px;
 }
@@ -38,7 +50,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  color: #5f4c36;
+  color: #745540;
 }
 
 .precoInput {
@@ -65,4 +77,24 @@
 
 .divisor {
   color: #dadada;
+}
+
+.limpaFiltro {
+  background: none;
+  border: 1px solid #745540;
+  color: #745540;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: 1rem;
+  transition:
+    0.2s ease,
+    color 0.2s ease;
+}
+
+.limpaFiltro:hover {
+  background: #745540;
+  color: white;
 }

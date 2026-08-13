@@ -40,20 +40,12 @@
   border-radius: 0px 32px 32px 0px;
 }
 
-.titulo {
-  margin: 0;
-  font-size: clamp(2.25rem, 2.5vw, 3.25rem);
-  line-height: 1.03;
-  letter-spacing: -0.03em;
-  color: #fff9f0;
-}
-
 .texto {
   max-width: 38rem;
   margin: 1.25rem 0 2rem;
   line-height: 1.8;
   color: #dccebe;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .etapas {
@@ -117,21 +109,19 @@
   background: #a7c49a;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .secaoPersonalizados {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
   }
   .cardPreview {
     min-height: 420px;
-  }
-}
-
-@media (max-width: 680px) {
-  .secaoPersonalizados {
-    padding: 2rem 1rem;
+    border-radius: 32px;
   }
   .conteudo {
     padding: 2rem 1.5rem;
+    border-radius: 32px;
+    margin-top: 0.5rem;
   }
   .texto {
     margin-bottom: 1.5rem;

@@ -18,7 +18,6 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Wrapper só pra imagem ter posição/altura definidas */
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -106,8 +105,6 @@
 
 @media (max-width: 768px) {
   .cardVenda {
-    width: 47vw;
-    flex-shrink: 0;
-    scroll-snap-align: start;
+    width: 100%;
   }
 }
