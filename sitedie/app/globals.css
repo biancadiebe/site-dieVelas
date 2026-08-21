@@ -5,6 +5,15 @@
   --foreground: #bdb5b5;
   --breakpoint-mobile: 768px;
   --breakpoint-tablet: 1024px;
+
+  /* Cores do projeto */
+  --cor-primaria: #745540;
+  --cor-texto-escuro: #5f4c36;
+  --cor-texto-claro: #6e6d6b;
+  --cor-botao-verde: #98b98b;
+  --cor-botao-verde-hover: #a7c49a;
+  --cor-destaque-verde: #5db388;
+  --cor-texto-principal: #2b2316;
 }
 
 @theme inline {

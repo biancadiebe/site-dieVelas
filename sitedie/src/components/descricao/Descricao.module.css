@@ -1,0 +1,370 @@
+.divDescricao {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textoInicial {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.catalogoInicial {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.tituloCatalogo {
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+}
+
+.link-voltar-ao-catalogo {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-voltar-ao-catalogo:hover {
+  color: var(--cor-primaria);
+}
+
+.imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.imagemPrincipal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.imagensSecundarias {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+}
+
+.imagemSecundaria {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.imagemSecundaria:hover {
+  border-color: var(--cor-primaria);
+}
+
+.img {
+  object-fit: cover;
+}
+
+.descricaoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bolder;
+  color: var(--cor-texto-principal);
+}
+
+.preco {
+  font-size: 1.8rem;
+  color: var(--cor-texto-principal);
+  margin: 0;
+  font-weight: bolder;
+}
+
+.tiposdeVelas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cardTipo {
+  flex: 1;
+  max-width: 150px;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTipo:hover {
+  border-color: var(--cor-botao-verde-hover);
+  background: #f9f5ff;
+}
+
+.cardTipo.ativo {
+  border-color: var(--cor-botao-verde);
+  background: var(--cor-botao-verde);
+}
+
+.cardTipo.ativo .labelTipo {
+  color: var(--cor-texto-principal);
+  font-weight: 700;
+}
+
+.labelTipo {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.seletorAroma {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--cor-texto-principal);
+  font-weight: 600;
+}
+
+.inputAroma {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: var(--cor-texto-principal);
+  font: inherit;
+}
+
+.titutloDescricao {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 1.5rem 0 0.5rem 0;
+  color: var(--cor-primaria);
+}
+
+.label {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.divProduto {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.hr {
+  color: var(--cor-primaria);
+  opacity: 0.2;
+}
+
+.botaoEncomendar {
+  color: var(--cor-texto-principal);
+  background: var(--cor-botao-verde);
+  padding: 1rem;
+  gap: 1rem;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 2rem;
+  font-weight: 550;
+  margin-top: 1.5rem;
+}
+
+.catalogoInferior {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 0 2rem;
+}
+
+.cardsInferiores {
+  display: flex;
+  gap: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.tituloCatalogoInferior {
+  color: var(--cor-texto-principal);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .divDescricao {
+    padding: 1rem;
+  }
+
+  .textoInicial {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .tituloCatalogo,
+  .catalogoInicial {
+    font-size: 0.85rem;
+  }
+
+  .link-voltar-ao-catalogo {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    justify-content: flex-start;
+    font-size: 0.85rem;
+  }
+
+  .divProduto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "galeria"
+      "preco"
+      "divisor"
+      "tipos"
+      "aroma"
+      "descricao-titulo"
+      "descricao"
+      "encomendar";
+    gap: 0.9rem;
+  }
+
+  .descricaoItem {
+    display: contents;
+  }
+
+  .titulo {
+    grid-area: titulo;
+    font-size: 1.5rem;
+  }
+
+  .imgs {
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .imagemPrincipal {
+    width: 100%;
+    height: min(72vw, 400px);
+    min-height: 250px;
+  }
+
+  .imagensSecundarias {
+    flex-direction: column;
+    gap: 0.65rem;
+    justify-content: flex-start;
+  }
+
+  .imagemSecundaria {
+    width: clamp(64px, 18vw, 92px);
+    height: clamp(64px, 18vw, 92px);
+  }
+
+  .preco {
+    grid-area: preco;
+    font-size: 1.5rem;
+  }
+
+  .hr {
+    grid-area: divisor;
+    width: 100%;
+  }
+
+  .tiposdeVelas {
+    grid-area: tipos;
+    margin-top: 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cardTipo {
+    min-width: 0;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .seletorAroma {
+    grid-area: aroma;
+  }
+
+  .titutloDescricao {
+    grid-area: descricao-titulo;
+    margin: 0.5rem 0 0;
+  }
+
+  .label {
+    grid-area: descricao;
+  }
+
+  .botaoEncomendar {
+    grid-area: encomendar;
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto 0;
+  }
+
+  .catalogoInferior {
+    margin: 2rem 0 0;
+  }
+
+  .cardsInferiores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, clamp(180px, 36vw, 160px)));
+    gap: 0.75rem;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .cardsInferiores > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .cardsInferiores > :nth-child(n + 3) {
+    display: none;
+  }
+
+  .tituloCatalogoInferior {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+}

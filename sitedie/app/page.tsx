@@ -16,6 +16,7 @@ import { Personalizados } from "@/src/components/personalizados/Personalizados";
 import Button from "../src/components/button/Button";
 import router from "next/dist/shared/lib/router/router";
 import { useRouter } from "next/dist/client/components/navigation";
+import { precoMinimoPersonalizado } from "@/src/data/valores";
 
 export default function Home() {
   const router = useRouter();
@@ -83,6 +84,7 @@ export default function Home() {
 
       <div className={styles.divVendas}>
         <CardVenda
+          id="9"
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
           title="Vela Bubble"
@@ -90,24 +92,27 @@ export default function Home() {
           img="/imagens/velabubble.jpg"
         />
         <CardVenda
+          id="0"
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
           title="Vela Brotinho de Bambu"
-          price="50,00"
-          img="/imagens/vela120g.jpg"
+          price="30,00"
+          img="/imagens/velabrotinhodebambu.jpg"
         />
         <CardVenda
+          id="8"
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
           title="Vela na Latinha - Personalizada"
-          price="50,00"
+          price={precoMinimoPersonalizado("8", "50,00")}
           img="/imagens/velalata.jpeg"
         />
         <CardVenda
+          id="13"
           icon={<MdOutlineShoppingCart />}
           label="Compre agora"
-          title="Vela média - Personalizada"
-          price="50,00"
+          title="Vela Média - Personalizada"
+          price={precoMinimoPersonalizado("13", "50,00")}
           img="/imagens/velamedia.jpeg"
         />
       </div>

@@ -3,12 +3,11 @@
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #745540;
+  background: var(--cor-primaria);
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
@@ -17,12 +16,16 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff;
+  margin: 0;
 }
 
 .nav {
   display: flex;
   gap: 1.25rem;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav a {
@@ -38,16 +41,54 @@
 }
 
 .icons {
-  display: flex;
-  color: #ffffff;
-  font-size: 2rem;
-  padding-right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .icons span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.busca {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.busca input {
+  width: 150px;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  background: var(--cor-primaria);
+  color: #e7e5e5;
+  font: inherit;
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .header {
+    padding: 0.85rem 1rem;
+  }
+
+  .nav {
+    gap: 0.55rem;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .busca {
+    gap: 0.25rem;
+  }
+
+  .busca input {
+    width: clamp(90px, 14vw, 135px);
+  }
 }
 
 /*MOBILE*/
@@ -59,7 +100,9 @@
 @media (max-width: 768px) {
   .header {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /*esquerda - centro - direita */
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
     align-items: center;
   }
   .nav {
@@ -82,9 +125,22 @@
   }
   .logo {
     justify-self: center;
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    transform: none;
   }
-  .icons {
+  .busca {
     justify-self: end;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: stretch;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .busca input {
+    width: min(100%, 300px);
   }
   .subtitulo {
     font-weight: bold;
@@ -114,7 +170,7 @@
   padding: 0 2rem;
 }
 .menuMobile {
-  background: #745540;
+  background: var(--cor-primaria);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;

@@ -1,6 +1,6 @@
 .subtitulo {
   font-size: clamp(1.2rem, 3vw, 2.5rem);
-  color: #5f4c36;
+  color: var(--cor-texto-escuro);
   margin-top: 2rem;
   display: flex;
   justify-content: start;
@@ -13,7 +13,7 @@
 
 .texto {
   font-size: clamp(0.9rem, 2vw, 1.5rem);
-  color: #6e6d6b;
+  color: var(--cor-texto-claro);
   display: flex;
   justify-content: start;
   padding-left: 3rem;
@@ -36,8 +36,8 @@
   align-items: center;
   gap: 0.4rem;
   background: #ffffff;
-  color: #5f4c36;
-  border: 1px solid #5f4c36;
+  color: var(--cor-texto-escuro);
+  border: 1px solid var(--cor-texto-escuro);
   border-radius: 20rem;
   padding: 0.35rem 0.6rem;
   width: 90px;
@@ -54,6 +54,26 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+  .cardVendas {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.produtoNaoEncontrado {
+  grid-column: 1 / -1;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--cor-texto-escuro);
+}
+
+.produtoNaoEncontrado h2,
+.produtoNaoEncontrado p {
+  margin: 0.5rem 0;
 }
 
 .modalOverlay {
@@ -93,8 +113,8 @@
   position: absolute;
   top: 3rem;
   right: 2.5rem;
-  background: #745540;
-  border: 1px solid #745540;
+  background: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
   color: #ffffff;
   padding: 0.65rem 1rem;
   border-radius: 999px;
@@ -113,6 +133,7 @@
 @media (max-width: 768px) {
   .divCatalogo {
     display: block;
+    padding: 1rem;
   }
 
   .filtroDesktop {
@@ -139,15 +160,16 @@
   }
 
   .cardVendas {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: center;
-    gap: 1rem;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .cardVendas {
-    grid-template-columns: repeat(2, minmax(170px, 70%));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
   }
 }

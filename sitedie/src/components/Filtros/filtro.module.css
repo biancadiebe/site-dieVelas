@@ -40,7 +40,7 @@
 }
 
 .subtituloFiltro {
-  color: #745540;
+  color: var(--cor-primaria);
   font-weight: bolder;
   font-size: 18px;
 }
@@ -50,7 +50,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  color: #745540;
+  color: var(--cor-primaria);
 }
 
 .precoInput {
@@ -63,7 +63,7 @@
 
 .slider {
   width: 100%;
-  accent-color: #5db388;
+  accent-color: var(--cor-destaque-verde);
   cursor: pointer;
 }
 
@@ -81,8 +81,8 @@
 
 .limpaFiltro {
   background: none;
-  border: 1px solid #745540;
-  color: #745540;
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-primaria);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -95,6 +95,6 @@
 }
 
 .limpaFiltro:hover {
-  background: #745540;
+  background: var(--cor-primaria);
   color: white;
 }

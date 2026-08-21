@@ -1,0 +1,150 @@
+export interface Produto {
+  id: string;
+  title: string;
+  aroma: string[];
+  tipo: string;
+  price: string;
+  img: string;
+  imgs?: string[];
+  velasDisponiveis?: string[];
+}
+
+export const produtos: Produto[] = [
+  {
+    id: "0",
+    title: "Vela Brotinho de Bambu",
+    aroma: ["fresco"],
+    tipo: "classicas",
+    price: "30,00",
+    img: "/imagens/velabrotinhodebambu.jpg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "1",
+    title: "Vela Baunilha",
+    aroma: ["doce"],
+    tipo: "classicas",
+    price: "30,00",
+    img: "/imagens/velabaunilha.jpeg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "2",
+    title: "Vela Lavanda",
+    aroma: ["floral"],
+    tipo: "classicas",
+    price: "50,00",
+    img: "/imagens/velalavanda.jpg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "3",
+    title: "Vela Limão Siciliano",
+    aroma: ["citrico"],
+    tipo: "classicas",
+    price: "50,00",
+    img: "/imagens/velalimaosiciliano.jpg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "4",
+    title: "Vela Lírio Verde",
+    aroma: ["floral"],
+    tipo: "classicas",
+    price: "50,00",
+    img: "/imagens/velalirioverde.webp",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "5",
+    title: "Vela Maçã e Canela",
+    aroma: ["doce"],
+    tipo: "classicas",
+    price: "50,00",
+    img: "/imagens/velamacaecanela.jpg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "6",
+    title: "Vela Pitanguinha",
+    aroma: ["frutada"],
+    tipo: "classicas",
+    price: "50,00",
+    img: "/imagens/velapitanguinha.jpeg",
+    imgs: ["/imagens/velanalatinha.webp", "/imagens/vela100ml.jpg"],
+  },
+  {
+    id: "7",
+    title: "Vela 150ML - Personalizada",
+    aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
+    tipo: "personalizadas",
+    price: "50,00",
+    img: "/imagens/vela150ml.jpg",
+  },
+  {
+    id: "8",
+    title: "Vela na Latinha - Personalizada",
+    aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
+    tipo: "personalizadas",
+    price: "50,00",
+    img: "/imagens/velalata.jpeg",
+  },
+  {
+    id: "9",
+    title: "Vela Bubble",
+    aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
+    tipo: "especiais",
+    price: "50,00",
+    img: "/imagens/velabubble.jpg",
+    velasDisponiveis: [
+      "Brotinho de Bambu",
+      "Baunilha",
+      "Lavanda",
+      "Limão Siciliano",
+      "Lírio Verde",
+      "Maçã e Canela",
+      "Pitanguinha",
+    ],
+  },
+  {
+    id: "10",
+    title: "Vela Especial - Namorados",
+    aroma: ["doce"],
+    tipo: "especiais",
+    price: "50,00",
+    img: "/imagens/velanamorados.jpg",
+  },
+  {
+    id: "11",
+    title: "Vela Especial - Dia das Mães",
+    aroma: ["doce"],
+    tipo: "especiais",
+    price: "50,00",
+    img: "/imagens/veladiadasmaes.jpg",
+  },
+  {
+    id: "12",
+    title: "Vela Especial - Natal",
+    aroma: ["floral"],
+    tipo: "especiais",
+    price: "50,00",
+    img: "/imagens/velanatal.jpg",
+  },
+  {
+    id: "13",
+    title: "Vela Média - Personalizada",
+    aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
+    tipo: "personalizadas",
+    price: "50,00",
+    img: "/imagens/velamedia.jpeg",
+    velasDisponiveis: [
+      "Brotinho de Bambu",
+      "Baunilha",
+      "Lavanda",
+      "Limão Siciliano",
+      "Lírio Verde",
+      "Maçã e Canela",
+      "Pitanguinha",
+    ],
+  },
+];

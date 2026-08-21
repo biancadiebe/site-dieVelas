@@ -9,16 +9,28 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { useState } from "react";
 import { FaFilter } from "react-icons/fa6";
 import Button from "@/src/components/button/Button";
+import { produtos } from "@/src/data/velas";
+import { useSearchParams } from "next/navigation";
+import { precoMinimoPersonalizado } from "@/src/data/valores";
+
+function precoNumericoDoCard(produto: Produto) {
+  return Number(
+    precoMinimoPersonalizado(produto.id, produto.price)
+      .replace(/\./g, "")
+      .replace(",", "."),
+  );
+}
 
 function produtoFiltro(produto: Produto, filtro: FiltroState) {
   // cria funcao
   if (filtro.tipo && produto.tipo !== filtro.tipo) return false; // se algum filtro for selecionado (e nao esta vazio) e o tipo de produto e diferente do filtro, retorna falso
   if (filtro.aroma && !produto.aroma.includes(filtro.aroma)) return false; // se algum aroma for selecionado e o aroma do produto nao inclui o aroma do filtro > falso
-  const precoProduto = Number(produto.price.replace(",", "."));
+  const precoProduto = precoNumericoDoCard(produto);
   return precoProduto <= filtro.precoMax; // mostrar se o preço do produto for até o valor selecionado
 }
 
 interface Produto {
+  id: string;
   title: string;
   aroma: string[];
   tipo: string;
@@ -34,113 +46,25 @@ interface FiltroState {
 }
 
 export default function Catalogo() {
-  const produtos = [
-    {
-      title: "Vela Brotinho de Bambu",
-      aroma: ["fresco"],
-      tipo: "classicas",
-      price: "30,00",
-      img: "/imagens/velabrotinhodebambu.jpg",
-    },
-    {
-      title: "Vela Baunilha",
-      aroma: ["doce"],
-      tipo: "classicas",
-      price: "30,00",
-      img: "/imagens/velabaunilha.jpeg",
-    },
-    {
-      title: "Vela Lavanda",
-      aroma: ["floral"],
-      tipo: "classicas",
-      price: "50,00",
-      img: "/imagens/velalavanda.jpg",
-    },
-    {
-      title: "Vela Limão Siciliano",
-      aroma: ["citrico"],
-      tipo: "classicas",
-      price: "50,00",
-      img: "/imagens/velalimaosiciliano.jpg",
-    },
-    {
-      title: "Vela Lírio Verde",
-      aroma: ["floral"],
-      tipo: "classicas",
-      price: "50,00",
-      img: "/imagens/velalirioverde.jpeg",
-    },
-    {
-      title: "Vela Maçã e Canela",
-      aroma: ["doce"],
-      tipo: "classicas",
-      price: "50,00",
-      img: "/imagens/velamacaecanela.jpg",
-    },
-    {
-      title: "Vela Pitanguinha",
-      aroma: ["frutada"],
-      tipo: "classicas",
-      price: "50,00",
-      img: "/imagens/velapitanguinha.jpeg",
-    },
-    {
-      title: "Vela 150ML - Personalizada",
-      aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
-      tipo: "personalizadas",
-      price: "50,00",
-      img: "/imagens/vela150ml.jpg",
-    },
-    {
-      title: "Vela na Latinha - Personalizada",
-      aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
-      tipo: "personalizadas",
-      price: "50,00",
-      img: "/imagens/velalata.jpeg",
-    },
-    {
-      title: "Vela Bubble",
-      aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
-      tipo: "especiais",
-      price: "50,00",
-      img: "/imagens/velabubble.jpg",
-    },
-    {
-      title: "Vela Especial - Namorados",
-      aroma: ["doce"],
-      tipo: "especiais",
-      price: "50,00",
-      img: "/imagens/velanamorados.jpg",
-    },
-    {
-      title: "Vela Especial - Dia das Mães",
-      aroma: ["doce"],
-      tipo: "especiais",
-      price: "50,00",
-      img: "/imagens/veladiadasmaes.jpg",
-    },
-    {
-      title: "Vela Especial - Natal",
-      aroma: ["floral"],
-      tipo: "especiais",
-      price: "50,00",
-      img: "/imagens/velanatal.jpg",
-    },
-    {
-      title: "Vela Média - Personalizada",
-      aroma: ["floral", "citrico", "fresco", "frutado", "doce"],
-      tipo: "personalizadas",
-      price: "50,00",
-      img: "/imagens/velamedia.jpeg",
-    },
-  ];
-
+  const searchParams = useSearchParams();
+  const busca = searchParams.get("busca")?.trim().toLowerCase() ?? "";
   const [filtro, setFiltro] = useState({
     aroma: "",
     tipo: "",
     precoMax: 100,
   });
   const [showFiltroModal, setShowFiltroModal] = useState(false);
+  const produtosFiltrados = produtos.filter((produto) => {
+    const correspondeBusca =
+      !busca ||
+      produto.title.toLowerCase().includes(busca) ||
+      produto.aroma.some((aroma) => aroma.toLowerCase().includes(busca)) ||
+      produto.velasDisponiveis?.some((vela) =>
+        vela.toLowerCase().includes(busca),
+      );
+
+    return correspondeBusca && produtoFiltro(produto, filtro);
+  });
 
   return (
     <>
@@ -165,18 +89,33 @@ export default function Catalogo() {
           />
         </div>
         <div className={styles.cardVendas}>
-          {produtos
-            .filter((p) => produtoFiltro(p, filtro))
-            .map((produto) => (
-              <CardVenda
-                key={produto.title}
-                icon={<MdOutlineShoppingCart />}
-                label="Compre agora"
-                title={produto.title}
-                price={produto.price}
-                img={produto.img}
-              />
-            ))}
+          {produtosFiltrados.length === 0 ? (
+            <div className={styles.produtoNaoEncontrado}>
+              <h2>Produto não encontrado</h2>
+              <p>Não encontramos nenhuma vela com esse nome ou aroma.</p>
+            </div>
+          ) : (
+            produtosFiltrados.map((produto) =>
+              (() => {
+                const precoCard = precoMinimoPersonalizado(
+                  produto.id,
+                  produto.price,
+                );
+
+                return (
+                  <CardVenda
+                    key={produto.id}
+                    id={produto.id}
+                    icon={<MdOutlineShoppingCart />}
+                    label="Compre agora"
+                    title={produto.title}
+                    price={precoCard}
+                    img={produto.img}
+                  />
+                );
+              })(),
+            )
+          )}
         </div>
       </div>
 

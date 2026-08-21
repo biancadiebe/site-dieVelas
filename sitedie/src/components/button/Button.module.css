@@ -7,17 +7,17 @@
 }
 
 .primary {
-  background: #745540;
+  background: var(--cor-primaria);
   color: #ffffff;
-  border: 1px solid #745540;
+  border: 1px solid var(--cor-primaria);
   padding: 0.6rem 1rem;
   border-radius: 999px;
 }
 
 .ghost {
   background: #ffffff;
-  color: #5f4c36;
-  border: 1px solid #5f4c36;
+  color: var(--cor-texto-escuro);
+  border: 1px solid var(--cor-texto-escuro);
   padding: 0.35rem 0.6rem;
   border-radius: 999px;
 }

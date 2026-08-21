@@ -22,7 +22,7 @@
 }
 
 .cardAccent {
-  background: #745540;
+  background: var(--cor-primaria);
   border-color: transparent;
 }
 
@@ -40,7 +40,7 @@
   background: #f3e7db;
   border-radius: 999px;
   padding: 1rem;
-  color: #5f4c36;
+  color: var(--cor-texto-escuro);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@
 .title {
   margin: 0;
   font-size: 1.2rem;
-  color: #1b1b1b;
+  color: var(--cor-texto-principal);
   font-weight: 700;
 }
 
@@ -58,7 +58,7 @@
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #6e6d6b;
+  color: var(--cor-texto-claro);
 }
 
 /* ÁREA MOBILE */
