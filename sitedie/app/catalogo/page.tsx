@@ -12,6 +12,7 @@ import Button from "@/src/components/button/Button";
 import { produtos } from "@/src/data/velas";
 import { useSearchParams } from "next/navigation";
 import { precoMinimoPersonalizado } from "@/src/data/valores";
+import { Suspense } from "react";
 
 function precoNumericoDoCard(produto: Produto) {
   return Number(
@@ -45,7 +46,7 @@ interface FiltroState {
   precoMax: number;
 }
 
-export default function Catalogo() {
+function CatalogoConteudo() {
   const searchParams = useSearchParams();
   const busca = searchParams.get("busca")?.trim().toLowerCase() ?? "";
   const [filtro, setFiltro] = useState({
@@ -153,5 +154,13 @@ export default function Catalogo() {
         <Footer />
       </div>
     </>
+  );
+}
+
+export default function Catalogo() {
+  return (
+    <Suspense fallback={<p>Carregando catálogo...</p>}>
+      <CatalogoConteudo />
+    </Suspense>
   );
 }
