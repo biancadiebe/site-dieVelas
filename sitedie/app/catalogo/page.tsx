@@ -159,7 +159,7 @@ function CatalogoConteudo() {
 
 export default function Catalogo() {
   return (
-    <Suspense fallback={<p>Carregando catálogo...</p>}>
+    <Suspense fallback={<div>Carregando catálogo...</div>}>
       <CatalogoConteudo />
     </Suspense>
   );
