@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   description: "Velas artesanais e veganas",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
