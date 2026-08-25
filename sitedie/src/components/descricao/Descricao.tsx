@@ -16,6 +16,7 @@ import {
   valoresPersonalizadosLatinha,
   valoresPersonalizadosMedia,
 } from "@/src/data/valores";
+import { BotaoWhatsapp } from "../botaoWhatsapp/BotaoWhatsapp";
 
 const tipos = [
   { id: "grande", label: "Grande", preco: "45,00" },
@@ -92,6 +93,12 @@ export default function Descricao({
 
     if (tipoClicado !== -1) selecionarTipo(tipoClicado);
   };
+
+  const mensagemWhatsapp = `Olá! Gostaria de encomendar e saber mais informações de:
+    Produto: ${title}
+    Tamanho: ${opcaoSelecionada?.label ?? ""}
+    Preço: R$ ${precoSelecionado}
+    ${aromaSelecionado ? `Aroma: ${aromaSelecionado}` : ""}`;
 
   return (
     <>
@@ -184,10 +191,12 @@ export default function Descricao({
 
             <p className={styles.titutloDescricao}>DESCRIÇÃO</p>
             <p className={styles.label}>{label}</p>
-            <button className={styles.botaoEncomendar}>
-              Encomendar pelo WhatsApp
-              <FaWhatsapp className={styles.iconWhatsapp} />
-            </button>
+            <BotaoWhatsapp
+              className={styles.botaoEncomendar}
+              mensagem={mensagemWhatsapp}
+            >
+              Encomendar pelo Whatsapp <FaWhatsapp />
+            </BotaoWhatsapp>
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@ import Button from "../src/components/button/Button";
 import router from "next/dist/shared/lib/router/router";
 import { useRouter } from "next/dist/client/components/navigation";
 import { precoMinimoPersonalizado } from "@/src/data/valores";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -77,9 +78,9 @@ export default function Home() {
       </h2>
       <p className={`${styles["texto"]}`}>Descubra nossos aromas</p>
       <p>
-        <a href="/catalogo" className={styles["link-ver-todos"]}>
-          Ver todos <FaLongArrowAltRight />
-        </a>
+        <Link href="/catalogo" className={styles["link-ver-todos"]}>
+          Ver todos <FaLongArrowAltRight />{" "}
+        </Link>
       </p>
 
       <div className={styles.divVendas}>

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import styles from "./Personalizados.module.css";
 import Button from "../button/Button";
+import { BotaoWhatsapp } from "../botaoWhatsapp/BotaoWhatsapp";
 
 export function Personalizados() {
+  const mensagemWhatsapp = `Olá, gostaria de saber mais informações sobre os pedidos personalizados!`;
+
   return (
     <section className={styles.secaoPersonalizados}>
       <div className={styles.cardPreview}>
@@ -58,9 +61,9 @@ export function Personalizados() {
           </div>
         </div>
 
-        <button className={styles.botao} type="button">
+        <BotaoWhatsapp className={styles.botao} mensagem={mensagemWhatsapp}>
           Fazer um pedido
-        </button>
+        </BotaoWhatsapp>
       </div>
     </section>
   );
