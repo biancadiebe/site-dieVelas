@@ -168,26 +168,23 @@ export default function Descricao({
                 ))}
             </div>
 
-            {tipo === "personalizadas" ||
-              (id === "9" && (
-                <label className={styles.seletorAroma}>
-                  Aroma
-                  <select
-                    value={aromaSelecionado}
-                    onChange={(event) =>
-                      setAromaSelecionado(event.target.value)
-                    }
-                    className={styles.inputAroma}
-                  >
-                    <option value="">Selecione um aroma</option>
-                    {aromasDisponiveis.map((velasDisponiveis) => (
-                      <option key={velasDisponiveis} value={velasDisponiveis}>
-                        {velasDisponiveis}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              ))}
+            {(tipo === "personalizadas" || id === "9") && (
+              <label className={styles.seletorAroma}>
+                Aroma
+                <select
+                  value={aromaSelecionado}
+                  onChange={(event) => setAromaSelecionado(event.target.value)}
+                  className={styles.inputAroma}
+                >
+                  <option value="">Selecione um aroma</option>
+                  {aromasDisponiveis.map((velasDisponiveis) => (
+                    <option key={velasDisponiveis} value={velasDisponiveis}>
+                      {velasDisponiveis}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
 
             <p className={styles.titutloDescricao}>DESCRIÇÃO</p>
             <p className={styles.label}>{label}</p>

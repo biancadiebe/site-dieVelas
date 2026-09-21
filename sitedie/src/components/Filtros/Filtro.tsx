@@ -78,7 +78,7 @@ export default function Filtro({
               }
               className={styles.precoInput}
               min={0}
-              max={100}
+              max={500}
             />
           </span>
         </div>
@@ -87,7 +87,7 @@ export default function Filtro({
         <input
           type="range"
           min={0}
-          max={100}
+          max={500}
           value={filtro.precoMax}
           onChange={(e) =>
             onFiltroChange({ ...filtro, precoMax: Number(e.target.value) })

@@ -20,6 +20,7 @@ const valoresPersonalizadosPorProduto = {
   "7": valoresPersonalizadosGrande,
   "8": valoresPersonalizadosLatinha,
   "13": valoresPersonalizadosMedia,
+  "14": valoresPersonalizadosGrande,
 };
 
 export function precoMinimoPersonalizado(id: string, precoPadrao: string) {

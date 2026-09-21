@@ -67,7 +67,7 @@ export const produtos: Produto[] = [
   {
     id: "6",
     title: "Vela Pitanguinha",
-    aroma: ["frutada"],
+    aroma: ["frutado"],
     tipo: "classicas",
     price: "50,00",
     img: "/imagens/velapitanguinha.jpeg",

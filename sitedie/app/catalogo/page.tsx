@@ -52,7 +52,7 @@ function CatalogoConteudo() {
   const [filtro, setFiltro] = useState({
     aroma: "",
     tipo: "",
-    precoMax: 100,
+    precoMax: 500,
   });
   const [showFiltroModal, setShowFiltroModal] = useState(false);
   const produtosFiltrados = produtos.filter((produto) => {
@@ -86,7 +86,7 @@ function CatalogoConteudo() {
           <Filtro
             onFiltroChange={setFiltro}
             filtro={filtro}
-            onLimpar={() => setFiltro({ aroma: "", tipo: "", precoMax: 100 })}
+            onLimpar={() => setFiltro({ aroma: "", tipo: "", precoMax: 500 })}
           />
         </div>
         <div className={styles.cardVendas}>
@@ -144,7 +144,7 @@ function CatalogoConteudo() {
             <Filtro
               onFiltroChange={setFiltro}
               filtro={filtro}
-              onLimpar={() => setFiltro({ aroma: "", tipo: "", precoMax: 100 })}
+              onLimpar={() => setFiltro({ aroma: "", tipo: "", precoMax: 500 })}
             />
           </div>
         </div>
