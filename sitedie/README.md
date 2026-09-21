@@ -2,35 +2,79 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+# DieVelas
+
+Loja virtual de velas veganas e artesanais, criada para a marca **DieVelas**.
+
+Este projeto também funciona como um ambiente de estudo e prática de ferramentas modernas para desenvolvimento web, com foco em Next.js, React, TypeScript, organização de componentes, filtros de catálogo e publicação na Vercel.
+
+## Acesse o projeto
+
+[Ver DieVelas na Vercel](https://site-die-velas-iac3-77w9c1gbw-diebe.vercel.app)
+
+## Sobre o projeto
+
+A DieVelas apresenta produtos artesanais com diferentes aromas, tamanhos e opções personalizadas. A aplicação foi pensada para simular uma experiência de catálogo de uma loja real, desde a descoberta dos produtos até a solicitação de encomenda pelo WhatsApp.
+
+## Funcionalidades
+
+- Catálogo de velas clássicas, especiais e personalizadas.
+- Busca por nome do produto ou aroma.
+- Filtros por tipo, aroma e preço.
+- Página de detalhes para cada produto.
+- Seleção de tamanho, quantidade e aroma em produtos personalizados.
+- Galeria de imagens em produtos com variações.
+- Cálculo do menor preço para pacotes personalizados.
+- Sugestões de outros produtos na página de detalhes.
+- Botão de encomenda pelo WhatsApp.
+- Layout responsivo para desktop e dispositivos móveis.
+
+## Tecnologias
+
+- Next.js 16 com App Router
+- React 19
+- TypeScript
+- CSS Modules
+- React Icons
+- Vercel
+
+## Como executar localmente
+
+Pré-requisitos: Node.js e npm instalados.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Depois, acesse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Outros comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build  # cria a build de produção
+npm run start  # inicia a aplicação em produção
+npm run lint   # verifica problemas de lint
+```
 
-## Learn More
+## Estrutura principal
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/                 Páginas e rotas da aplicação
+	catalogo/          Catálogo e páginas individuais dos produtos
+public/imagens/      Imagens das velas
+src/components/      Componentes reutilizáveis da interface
+src/data/             Produtos e valores dos pacotes personalizados
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Objetivos de estudo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este projeto foi desenvolvido para praticar:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Componentização e reutilização com React.
+- Rotas dinâmicas e navegação com Next.js.
+- Tipagem de dados com TypeScript.
+- Gerenciamento de estado e filtros no cliente.
+- Responsividade com CSS Modules.
+- Integração de imagens, links e ícones.
+- Deploy e atualização de uma aplicação na Vercel.
